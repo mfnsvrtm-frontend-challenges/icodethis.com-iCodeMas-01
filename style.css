@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.title {
+    font-size: 4.5vw;
+}
+
+.subtitle {
+    font-size: 1.25vw;
+}
+
+.card {
+    font-size: 4.75vw;
+}
+
+.card .value {
+    font-weight: 700;
+}
+
+.card .unit {
+    font-size: 1.5vw;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #EAF4FB;
+}
+
+.container {
+    position: relative;
+
+    display: grid;
+    justify-items: center;
+    align-content: center;
+
+    width: 90%;
+    aspect-ratio: 2 / 1;
+
+    text-align: center;
+
+    background: url(/images/iCodeMas/snow_bg.png) no-repeat;
+    background-size: cover;
+
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 1vw;
+}
+
+.container > * {
+    margin: 0;
+}
+
+.bg-img {
+    width: 100%;
+}
+
+.subtitle {
+    margin-top: 1em;
+}
+
+.countdown {
+    margin-top: 3vw;
+    display: flex;
+    gap: 1vw;
+}
+
+.card {
+    display: grid;
+    place-items: center;
+
+    width: 11vw;
+    
+    padding: 0.5em;
+    border-radius: 1vw;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    color: #365C6F;
+}
+
+.card > * {
+    margin: 0;
+}
+
+.card .value {
+    margin-bottom: 0.5vw;
+}
+
+.snowman-img, .santa-img {
+    position: absolute;
+    bottom: 5%;
+}
+
+.snowman-img {
+    width: 15vw;
+    left: 10%;
+    animation: bounce 1s linear infinite normal;
+}
+
+.santa-img {
+    width: 22vw;
+    right: 3%;
+
+    transform-origin: bottom center;
+    animation: 
+        twist 1.5s linear infinite normal,
+        bounce 0.75s linear infinite normal;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes twist {
+    0% {
+        rotate: 7.5deg;
+    }
+
+    25% {
+        rotate: 30deg;
+    }
+
+    50% {
+        rotate: 7.5deg;
+    }
+
+    75% {
+        rotate: -15deg;
+    }
+
+    100% {
+        rotate: 7.5deg;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        translate: 0 0;
+    }
+
+    25% {
+        translate: 0 5%;
+    }
+
+    50% {
+        translate: 0 0;
+    }
+
+    70% {
+        translate: 0 -5%;
+    }
+
+    100% {
+        translate: 0 0;
+    }
+}
